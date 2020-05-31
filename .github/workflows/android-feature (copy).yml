@@ -42,13 +42,5 @@ jobs:
       - name: Assemble Debug Test APK
         run: ./gradlew assembleDebugAndroidTest
 
-      android-pixel-4:
-  	type: instrumentation
- 	 # Specify the path to the debug and test apks generated early
- 	 app: app/build/outputs/apk/staging/debug/app-debug.apk
- 	 test: app/build/outputs/apk/androidTest/staging/debug/app-debug-androidTest.apk
- 	 device:
-  	  - model: flame
-  	    version: 29
-  	    locale: 'en'
-   	   orientation: portrait
+      - name: "Run UI Tests"
+  	uses: vgaidarji/android-github-actions-emulator@v1.0.1
