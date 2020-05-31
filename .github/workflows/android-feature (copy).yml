@@ -28,4 +28,4 @@ jobs:
         run: ./gradlew testDebugUnitTest
 
       - name: Run UI Tests
-        uses: "vgaidarji/android-github-actions/emulator@v1.0.1"
+        uses: vgaidarji/android-github-actions-emulator@v1.0.1
